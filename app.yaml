@@ -1,0 +1,46 @@
+application: evergreen-programmer
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+
+#Serving static files
+
+- url: /assets
+  static_dir: assets
+
+- url: /static
+  static_dir: static
+
+- url: /algorithms.html
+  static_files: templates/algorithms.html
+  upload: templates/algorithms.html
+  
+
+  
+- url: /algos/bubblesort.html
+  static_files: templates/algos/bubblesort.html
+  upload: templates/algos/bubblesort.html
+  
+- url: /algos/quicksort.html
+  static_files: templates/algos/quicksort.html
+  upload: templates/algos/quicksort.html
+  
+- url: /algos/mergesort.html
+  static_files: templates/algos/mergesort.html
+  upload: templates/algos/mergesort.html
+ 
+- url: .*
+  script: main.app
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+- name: jinja2
+  version: latest

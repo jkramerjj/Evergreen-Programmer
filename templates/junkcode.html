@@ -1,0 +1,173 @@
+
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="insert-scientist-modal" tabindex="-1"
+		role="dialog" aria-labelledby="Insert Scientist">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title"></h4>
+				</div>
+
+
+				<form action="/insertscientist" method="POST" class="form-horizontal" id="mainForm">
+					<input type="text" name="entity-key" class="hidden">
+					<div class="modal-body">
+
+						<div class="form-group">
+							<label for="scientist-input" class="col-sm-2 control-label">Name</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="scientist-name-input" class="scientist-name-input_class"
+									name="scientistName" placeholder="Scientist Name">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="movie-input" class="col-sm-2 control-label">Date of Birth</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="dob-input"
+									name="dob" placeholder="DD-MM-YYYY">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="movie-input" class="col-sm-2 control-label">Sex</label>
+							<label class="radio-inline">
+					          <input type="radio" name="inlineRadioOptions" id="maleRadio" value="Male">Male</label>
+					        <label class="radio-inline">
+					          <input type="radio" name="inlineRadioOptions" id="femaleRadio" value="Female">Female</label>
+						</div>
+						
+						<div class="form-group">
+							<label for="movie-input" class="col-sm-2 control-label">Specialities</label>
+							<label >
+					          <input type="checkbox" name="comsci_checked" id="computer_science" value="True"> Computer Science
+					        </label>
+					        
+					        <label >
+					          <input type="checkbox" name="math_checked" id="mathmatics" value="True"> Mathematics
+					        </label>
+					          
+					        <label >
+					          <input type="checkbox" name="biology_checked" id="biology" value="True"> Biology
+					        </label>
+					          
+					        <label >
+					          <input type="checkbox" name="physics_checked" id="physics" value="True"> Physics
+					        </label>	
+					        <label >
+					          <input type="checkbox" name="other_checked" id="other" value="True"> Other
+					        </label>					       
+						</div>
+						
+						
+						<div class="form-group">
+							<label for="scientist-input" class="col-sm-2 control-label">Famous Discovery</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="discovery-input"
+									name="famous_discovery" placeholder="Enter Discovery">
+							</div>
+						</div>
+						
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal" id="cancel_click">Cancle</button>
+						<button type="submit" class="btn btn-primary" id="submit_click">Submit</button>
+					</div>
+
+				</form>
+
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="delete-scientist-modal" tabindex="-1"
+		role="dialog" aria-labelledby="Delete Scientist">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title">Delete a Scientist</h4>
+				</div>
+
+
+				<form action="/deletescientist" method="POST" class="form-horizontal">
+					<input type="text" name="entity_key" class="hidden">
+					<div class="modal-body">
+
+						<p>Are you sure you want to delete?</p>
+						
+						
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+						<button type="submit" class="btn btn-danger">Delete Data</button>
+					</div>
+
+				</form>
+
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		<div class="container-fluid">
+	   <div class="row">
+		<img src="http://cdn.idigitaltimes.com/sites/idigitaltimes.com/files/2015/09/15/starwarstheforceawakens-kyloren.jpg" class="img-responsive">
+	   </div>
+	</div>
+
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Evergreen Programmer</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a id="add-scientist" data-toggle="modal" data-target="#insert-scientist-modal"
+						href="#">Add Scientist</a></li>
+
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#" id="toggle-edit">Edit</a></li>
+
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</nav>
+	
+
