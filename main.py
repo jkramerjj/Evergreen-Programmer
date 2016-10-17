@@ -72,7 +72,7 @@ app = webapp2.WSGIApplication([
     (r'/gae_examples.html', GAEExamples),
     ('/drop_me_a_line', DropMeALineHandler)
     
-], debug=True)
+], debug=False)
 
 
 
